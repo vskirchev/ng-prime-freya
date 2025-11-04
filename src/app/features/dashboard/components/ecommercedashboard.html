@@ -1,0 +1,24 @@
+<div class="grid grid-cols-12 gap-8 px-6">
+    <h1>{{store.count().value}}</h1>
+    <p-button (click)="increment()" label="Increment" />
+    <p-button (click)="decrement()" label="Decrement" />
+    <div class="col-span-12">
+        <message-widget />
+    </div>
+    <div class="col-span-12">
+        <stats-ecommerce-widget />
+    </div>
+    <div class="col-span-12 xl:col-span-8">
+        <orders-widget />
+    </div>
+    <div class="col-span-12 xl:col-span-4 grid grid-cols-12 gap-8">
+        <waiting-action-widget />
+        <sales-by-category-widget />
+    </div>
+    <div class="col-span-12 xl:col-span-3">
+        <clients-widget />
+    </div>
+    <div class="col-span-12 xl:col-span-9">
+        <ad-management-widget />
+    </div>
+</div>
