@@ -9,7 +9,6 @@ import {IconField} from 'primeng/iconfield';
 import {InputIcon} from 'primeng/inputicon';
 import {FormsModule} from '@angular/forms';
 import {AppSidebar} from '../sidebar/app.sidebar';
-import { CountStateStore } from '@/features/dashboard/state/count-store';
 
 @Component({
     selector: '[app-topbar]',
@@ -45,6 +44,4 @@ export class AppTopbar {
     onTopbarItemClick() {
         document.body.click();
     }
-
-    readonly store = inject(CountStateStore);
 }

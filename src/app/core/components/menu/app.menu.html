@@ -4,3 +4,10 @@
         <li *ngIf="item.separator" class="menu-separator"></li>
     </ng-container>
 </ul>
+
+<!--Demo Purpose Only (remove it afterward)-->
+<ul class="layout-menu" #menuContainer2>
+    <ng-container *ngFor="let item of tasks(); let i = index">
+        <li>{{item.title}} | {{item.status}}</li>
+    </ng-container>
+</ul>
