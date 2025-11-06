@@ -3,12 +3,12 @@ import { CommonModule } from '@angular/common';
 import { NavigationEnd, Router, RouterModule } from '@angular/router';
 import { filter, Subscription } from 'rxjs';
 import { AppTopbar } from '../topbar/app.topbar';
-import { LayoutService } from '@/core/service/layout.service';
 import { AppConfigurator } from '../configurator/app.configurator';
 import { AppBreadcrumb } from '../breadcrumb/app.breadcrumb';
 import { AppMenu } from '../menu/app.menu';
 import { AppRightMenu } from '../right-menu/app.rightmenu';
 import { AppSidebar } from '../sidebar/app.sidebar';
+import {LayoutService} from "@/core/layout/service/layout.service";
 
 @Component({
     selector: 'app-layout',

@@ -2,13 +2,13 @@ import {Component, ElementRef, inject, ViewChild} from '@angular/core';
 import {RouterModule} from '@angular/router';
 import {CommonModule} from '@angular/common';
 import {StyleClassModule} from 'primeng/styleclass';
-import {LayoutService} from '@/core/service/layout.service';
 import {InputText} from 'primeng/inputtext';
 import {ButtonModule} from 'primeng/button';
 import {IconField} from 'primeng/iconfield';
 import {InputIcon} from 'primeng/inputicon';
 import {FormsModule} from '@angular/forms';
 import {AppSidebar} from '../sidebar/app.sidebar';
+import {LayoutService} from "@/core/layout/service/layout.service";
 
 @Component({
     selector: '[app-topbar]',

@@ -1,7 +1,7 @@
 import {Component, ElementRef, inject, Signal, ViewChild} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {RouterModule} from '@angular/router';
-import {AppMenuitem} from '@/core/components/menu-item/app.menuitem';
+import {AppMenuitem} from "@/core/layout/components/menu-item/app.menuitem";
 
 interface MenuItem {
     label?: string;

@@ -6,11 +6,11 @@ import Aura from '@primeuix/themes/aura';
 import Lara from '@primeuix/themes/lara';
 import {PrimeNG} from 'primeng/config';
 import {SelectButtonModule} from 'primeng/selectbutton';
-import {LayoutService} from '@/core/service/layout.service';
 import {Router} from '@angular/router';
 import {DrawerModule} from 'primeng/drawer';
 import {ToggleSwitchModule} from 'primeng/toggleswitch';
 import {RadioButtonModule} from 'primeng/radiobutton';
+import {LayoutService} from "@/core/layout/service/layout.service";
 
 const presets = {
     Aura,

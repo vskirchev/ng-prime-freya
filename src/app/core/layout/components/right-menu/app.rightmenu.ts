@@ -1,8 +1,8 @@
 import {Component, computed, inject} from '@angular/core';
-import {LayoutService} from '@/core/service/layout.service';
 import {DrawerModule} from 'primeng/drawer';
 import {ButtonModule} from 'primeng/button';
 import {CommonModule} from '@angular/common';
+import {LayoutService} from "@/core/layout/service/layout.service";
 
 @Component({
     selector: '[app-right-menu]',

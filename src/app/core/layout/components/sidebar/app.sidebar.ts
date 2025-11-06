@@ -2,7 +2,7 @@ import {Component, ElementRef, HostListener, inject, ViewChild} from '@angular/c
 import {AppMenu} from '../menu/app.menu';
 import {CommonModule} from '@angular/common';
 import {RouterModule} from '@angular/router';
-import {LayoutService} from '@/core/service/layout.service';
+import {LayoutService} from "@/core/layout/service/layout.service";
 
 @Component({
     selector: '[app-sidebar]',
