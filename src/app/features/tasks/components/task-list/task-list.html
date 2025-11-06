@@ -1,0 +1,24 @@
+<div>
+        <div class="text-surface-900 dark:text-surface-0 font-semibold text-lg mt-8 mb-4 border-b border-surface-200 dark:border-surface-700 py-4">
+            {{ title }}
+        </div>
+        <ul class="list-none p-0 m-0">
+            <li *ngFor="let task of taskList" class="flex flex-col gap-4 md:flex-row md:items-center p-2 border-b border-surface-200 dark:border-surface-700">
+                <div class="flex items-center flex-1">
+                    <p-checkbox *ngIf="!task.isCompleted" [binary]="true" (onChange)="onCheckboxChange($event, task)" [inputId]="task.id.toString()"></p-checkbox>
+                    <label for="task.id" style="word-break: break-word;" class="font-medium whitespace-nowrap text-ellipsis overflow-hidden ml-2" [ngClass]="{ 'line-through': task.isCompleted }" style="max-width: 500px">{{ task.description }}</label>
+                </div>
+                <div class="flex flex-1 gap-4 flex-col sm:flex-row sm:justify-between">
+                    <div class="flex items-center">
+                        <span class="flex items-center font-semibold whitespace-nowrap" *ngIf="task.dueDate"><i class="pi pi-clock mr-2"></i>{{ parseDate(task.dueDate) }}</span>
+                        <div class="flex flex-1 gap-4 flex-col sm:flex-row sm:justify-between">
+                            <div class="flex items-center sm:justify-end">
+                                <button pButton pRipple type="button" icon="pi pi-ellipsis-v" class="z-30 ml-auto sm:ml-0" text rounded (click)="toggleMenu($event, task)"></button>
+                                <p-menu #menu [popup]="true" [model]="menuItems" styleClass="w-32" [appendTo]="'body'"></p-menu>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>

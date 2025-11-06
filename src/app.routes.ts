@@ -6,7 +6,7 @@ export const appRoutes: Routes = [
         path: '',
         component: AppLayout,
         children: [
-            { path: '', data: { breadcrumb: 'E-Commerce Dashboard' }, loadComponent: () => import('./app/features/dashboard/components/ecommercedashboard').then((c) => c.EcommerceDashboard) },
+            { path: 'tasklist', data: { breadcrumb: 'Task List' }, loadComponent: () => import('./app/features/tasks/components/index').then((c) => c.TaskList) },
         ]
     },
 ];

@@ -2,8 +2,6 @@ import {Component, ElementRef, inject, Signal, ViewChild} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {RouterModule} from '@angular/router';
 import {AppMenuitem} from '@/core/components/menu-item/app.menuitem';
-import {TaskStore} from "@/features/dashboard/state/task-store";
-import {Task} from "@/features/dashboard/type/task";
 
 interface MenuItem {
     label?: string;
@@ -40,19 +38,15 @@ export class AppMenu {
 
     model: MenuItem[] = [
         {
-            label: 'Dashboards',
-            icon: 'pi pi-home',
+            label: 'Apps',
+            icon: 'pi pi-th-large',
             items: [
                 {
-                    label: 'E-Commerce',
-                    icon: 'pi pi-fw pi-home',
-                    routerLink: ['/']
+                    label: 'Task List',
+                    icon: 'pi pi-fw pi-check-square',
+                    routerLink: ['/tasklist']
                 }
             ]
         }
     ];
-
-    // Demo Purpose Only (remove it afterward)
-    readonly store = inject(TaskStore);
-    readonly tasks: Signal<Task[]> = this.store.taskEntities;
 }
